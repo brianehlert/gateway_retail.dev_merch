@@ -1,0 +1,19 @@
+---
+environmentName: "production-us-west"
+gateway:
+  metadata:
+    name: "merch.acmefinancial.net"
+    displayName: "merchandise gateway"
+  desiredState:
+    ingress:
+      uris:
+        "http://merch.dev.acmefinancial.net": {}
+        "https://merch.dev.acmefinancial.net": {}
+      tls:
+        certRef:
+          ref: "/services/environments/{{environmentName}}/certs/merch.acmefinancial.net"
+        protocols:
+          - "TLSv1.3"
+      placement:
+        instanceRefs:
+          - ref: "/infrastructure/locations/unspecified/instances/12"
