@@ -1,6 +1,5 @@
 ---
-environmentName: "production-us-west"
-gateway:
+nginx_controller_gateway:
   metadata:
     name: "merch.acmefinancial.net"
     displayName: "merchandise gateway"
@@ -11,7 +10,7 @@ gateway:
         "https://merch.dev.acmefinancial.net": {}
       tls:
         certRef:
-          ref: "/services/environments/{{environmentName}}/certs/merch.acmefinancial.net"
+          ref: "/services/environments/{{nginx_controller_environmentName}}/certs/merch.acmefinancial.net"
         protocols:
           - "TLSv1.3"
       placement:
