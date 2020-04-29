@@ -1,4 +1,5 @@
 ---
+nginx_controller_environmentName: "production-us-west"
 nginx_controller_gateway:
   metadata:
     name: "merch.acmefinancial.net"
